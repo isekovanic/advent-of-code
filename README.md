@@ -10,9 +10,9 @@ The solutions are written in Python following a specific template. Reuse of this
 
 ## Structure
 
-Each day of AoC is solved within the respectable Day X directories.
+Each day of AoC is solved within the respectable `Days/Day X` directory.
 
-In each one of these, you will have a Problem 1 and Problem 2 directory, which contain the two parts of each problem.
+In each one of these, you will have a `Problem 1` and `Problem 2` directory, which contain the two parts of each problem.
 
 In each of the problem directories, you will have the following files:
 
@@ -24,19 +24,20 @@ In each of the problem directories, you will have the following files:
 In other words, the structure would look something like this for each day:
 
 ```
-...
-Day <X>/
-├── Problem 1/
-│   ├── input.txt
-│   ├── input_test.txt
-│   ├── input_test_expected.txt
-│   └── solution.py
-└── Problem 2/
-    ├── input.txt
-    ├── input_test.txt
-    ├── input_test_expected.txt
-    └── solution.py
-...
+Days/
+├─ ...
+├─ Day <X>/
+|  ├── Problem 1/
+|  │   ├── input.txt
+|  │   ├── input_test.txt
+|  │   ├── input_test_expected.txt
+|  │   └── solution.py
+|  └── Problem 2/
+|      ├── input.txt
+|      ├── input_test.txt
+|      ├── input_test_expected.txt
+|      └── solution.py
+└─ ...
 ```
 
 ## Prerequisites
@@ -45,7 +46,7 @@ Make sure you have Python 3.x installed on your local machine before running the
 
 ## Running the solutions
 
-To run each one of the daily problem solutions, go in the adequate folder (something along the lines of Day X/Problem X), execute
+To run each one of the daily problem solutions, go in the adequate folder (something along the lines of `Day X/Problem X`), execute
 
 ```
 python solution.py
