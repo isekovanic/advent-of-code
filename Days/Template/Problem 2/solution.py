@@ -1,6 +1,6 @@
 import sys
 
-sys.path.append('../../Core')
+sys.path.append('../../../Core')
 
 from SolverCore import SolverCore
 
