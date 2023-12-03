@@ -1,5 +1,6 @@
 from time import gmtime, strftime, time
-from abc import ABC, abstractmethod 
+from abc import ABC, abstractmethod
+from sys import argv
 
 input_types = {
 	'test': 'input_test.txt',
@@ -12,15 +13,19 @@ class SolverCore(ABC):
 		pass
 
 	def solve(self):
-		print('CUSTOM TEST CASE: \n')
-		print('=============================')
-		self.solve_for_type('test')
-		print('=============================\n')
+		execution_type = argv[1] if len(argv) > 1 else '-a'
 
-		print('ACTUAL TEST CASE: \n')
-		print('=============================')
-		self.solve_for_type('real')
-		print('=============================')
+		if execution_type == '-t' or execution_type == '-a':
+			print('CUSTOM TEST CASE: \n')
+			print('=============================')
+			self.solve_for_type('test')
+			print('=============================\n')
+
+		if execution_type == '-r' or execution_type == '-a':
+			print('ACTUAL TEST CASE: \n')
+			print('=============================')
+			self.solve_for_type('real')
+			print('=============================')
 
 	def solve_for_type(self, input_type):
 		input_file = input_types[input_type]
