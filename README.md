@@ -62,11 +62,11 @@ If you wish to run only a specific input, the core solver class comes with that 
 
 The currently supported arguments are:
 
-| arg  | required | description                                                                                           |
-| ---- | -------- | ----------------------------------------------------------------------------------------------------- |
-| `-t` | no       | Runs only the `input_test.txt` test case and compares it with the result in `input_test_expected.txt` |
-| `-r` | no       | Runs only the `input.txt` test case                                                                   |
-| `-a` | no       | Runs both of the test cases                                                                           |
+| arg     | required | description                                                                                           |
+| ------- | -------- | ----------------------------------------------------------------------------------------------------- |
+| `-t`    | no       | Runs only the `input_test.txt` test case and compares it with the result in `input_test_expected.txt` |
+| `-r`    | no       | Runs only the `input.txt` test case                                                                   |
+| `-a`    | no       | Runs both of the test cases                                                                           |
 
 As an example, if we only wanted to run our custom test case (for debugging purposes or similar), we would run:
 
