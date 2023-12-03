@@ -56,6 +56,25 @@ and it should work out of the box.
 
 If you wish to run the solutions with your own test cases, you can refer to the [Structure section](#structure) to know where to add them.
 
+#### Optional arguments
+
+If you wish to run only a specific input, the core solver class comes with that functionality.
+
+The currently supported arguments are:
+
+| arg  | required | description                                                                                           |
+| ---- | -------- | ----------------------------------------------------------------------------------------------------- |
+| `-t` | no       | Runs only the `input_test.txt` test case and compares it with the result in `input_test_expected.txt` |
+| `-r` | no       | Runs only the `input.txt` test case                                                                   |
+| `-a` | no       | Runs both of the test cases                                                                           |
+
+As an example, if we only wanted to run our custom test case (for debugging purposes or similar), we would run:
+
+```
+python solution.py -t
+```
+If no arguments are passed, **the program will default to `-a` as an argument** and will run both.
+
 ## Adding your own solutions / Using in future AoC competitions
 
 The repo comes with some core libraries used for testing the solutions or reusing already written algorithms. If you find it useful and want to use it in future AoC competitions, you may do that freely.
