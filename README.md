@@ -64,7 +64,7 @@ The currently supported arguments are:
 
 | argument | required | description                                                                                           |
 | -------- | -------- | ----------------------------------------------------------------------------------------------------- |
-| `-t`     | `no`     | Runs only the `input_test.txt` test case and compares it with the result in `input_test_expected.txt` |
+| `-t`     | no     | Runs only the `input_test.txt` test case and compares it with the result in `input_test_expected.txt` |
 | `-r`     | no       | Runs only the `input.txt` test case                                                                   |
 | `-a`     | no       | Runs both of the test cases                                                                           |
 
