@@ -76,9 +76,7 @@ class Graph:
 		# dfs, but looking for only 1 cycle
 
 		while stack:
-			# print(stack)
 			current_node, path = stack.pop()
-			# print('Current: ', current_node, len(path))
 
 			if current_node == self.start_node and len(path) > 3:
 				cycle = path[path.index(self.start_node):]
