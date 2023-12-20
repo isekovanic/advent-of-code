@@ -31,26 +31,7 @@ class Module:
 				return 0
 			return 1
 
-	def __str__(self):
-		return str({ 'mod_type': self.type, 'mod_state': self.state })
-
 class Solver(SolverCore):
-	def calculate_state(self, modules):
-		state = []
-		for key in sorted(modules.keys()):
-			module = modules[key]
-
-			if module.type == '%':
-				state += [module.state]
-			else:
-				inv_state = []
-				for inv_key in sorted(module.state.keys()):
-					inv_state += [module.state[inv_key]]
-
-				state += [tuple(inv_state)]
-
-		return tuple(state)
-
 	def _solve(self, problem_input):
 
 		cables = {}

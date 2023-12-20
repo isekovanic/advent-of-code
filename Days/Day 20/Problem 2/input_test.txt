@@ -1,6 +1,5 @@
 broadcaster -> a
 %a -> inv, con
-&inv -> b
-%b -> con
+&inv -> b, t
 &con -> t
-%t -> rx
+&t -> rx
