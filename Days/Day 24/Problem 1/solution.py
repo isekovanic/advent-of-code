@@ -1,8 +1,8 @@
 import sys
 
-sys.path.append('../../../Core')
+sys.path.append('../../../')
 
-from SolverCore import SolverCore
+from Core import SolverCore
 
 # Brief explanation of the idea:
 # We will try to form lines for every every hailstone's trajectory, resulting in a line equation.

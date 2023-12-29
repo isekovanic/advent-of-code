@@ -1,8 +1,8 @@
 import sys
 
-sys.path.append('../../../Core')
+sys.path.append('../../../')
 
-from SolverCore import SolverCore
+from Core import SolverCore
 
 max_steps = 64
 

@@ -1,8 +1,8 @@
 import sys
 
-sys.path.append('../../../Core')
+sys.path.append('../../../')
 
-from SolverCore import SolverCore
+from Core import SolverCore
 
 class Solver(SolverCore):
 	def calc_next_element(self, sequence):

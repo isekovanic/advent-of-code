@@ -1,9 +1,9 @@
 import sys
 from math import ceil, sqrt
 
-sys.path.append('../../../Core')
+sys.path.append('../../../')
 
-from SolverCore import SolverCore
+from Core import SolverCore
 
 class Solver(SolverCore):
 	def _solve(self, problem_input):

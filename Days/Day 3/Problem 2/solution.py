@@ -1,9 +1,9 @@
 import sys
 import re
 
-sys.path.append('../../../Core')
+sys.path.append('../../../')
 
-from SolverCore import SolverCore
+from Core import SolverCore
 
 class Solver(SolverCore):
 	def get_adj_numbers(self, potential_gear_location, number_locations):

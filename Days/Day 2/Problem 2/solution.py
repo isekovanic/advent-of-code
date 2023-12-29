@@ -1,9 +1,9 @@
 import sys
 from functools import reduce
 
-sys.path.append('../../../Core')
+sys.path.append('../../../')
 
-from SolverCore import SolverCore
+from Core import SolverCore
 
 cube_indices = ['red', 'green', 'blue']
 

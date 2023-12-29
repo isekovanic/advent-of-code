@@ -1,9 +1,9 @@
 import sys
 from copy import deepcopy
 
-sys.path.append('../../../Core')
+sys.path.append('../../../')
 
-from SolverCore import SolverCore
+from Core import SolverCore
 
 # This problem is a textbook minimum-cut one. A lot of resources exist about this online so not going
 # to delve deep into the topic.

@@ -1,8 +1,8 @@
 import sys
 
-sys.path.append('../../../Core')
+sys.path.append('../../../')
 
-from SolverCore import SolverCore
+from Core import SolverCore
 
 dx = [1, -1, 0, 0]
 dy = [0, 0, 1, -1]

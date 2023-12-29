@@ -1,8 +1,8 @@
 import sys
 
-sys.path.append('../../../Core')
+sys.path.append('../../../')
 
-from SolverCore import SolverCore
+from Core import SolverCore
 
 # In this solution we are going to:
 # - Skip most of the logic we had in Problem 1 and instead focus on several observations

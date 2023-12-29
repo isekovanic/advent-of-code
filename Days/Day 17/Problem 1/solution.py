@@ -1,9 +1,9 @@
 import sys
 import heapq
 
-sys.path.append('../../../Core')
+sys.path.append('../../../')
 
-from SolverCore import SolverCore
+from Core import SolverCore
 
 # Directions: 
 # 0 - standing still
