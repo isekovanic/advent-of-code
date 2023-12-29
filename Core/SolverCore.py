@@ -8,6 +8,10 @@ input_types = {
 }
 
 class SolverCore(ABC):
+	def __init__(self, expected_answer, input_file_override = None):
+		self.expected_answer = expected_answer
+		self.input_file_override = input_file_override
+
 	@abstractmethod
 	def _solve(self, input):
 		pass
@@ -39,8 +43,7 @@ class SolverCore(ABC):
 		print('The solution is: {}'.format(solution))
 
 		if input_type == 'test':
-			read_expected = open('input_test_expected.txt')
-			expected = read_expected.readline()
+			expected = self.expected_answer
 
 			if solution == expected:
 				print('The solution to the test case is correct !')
