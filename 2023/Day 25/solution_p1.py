@@ -1,7 +1,7 @@
 import sys
 from copy import deepcopy
 
-sys.path.append('../../../')
+sys.path.append('../../')
 
 from Core import SolverCore
 

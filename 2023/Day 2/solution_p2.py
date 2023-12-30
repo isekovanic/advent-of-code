@@ -1,7 +1,7 @@
 import sys
 from functools import reduce
 
-sys.path.append('../../../')
+sys.path.append('../../')
 
 from Core import SolverCore
 

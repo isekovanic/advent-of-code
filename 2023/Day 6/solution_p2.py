@@ -1,7 +1,7 @@
 import sys
 from math import ceil, sqrt
 
-sys.path.append('../../../')
+sys.path.append('../../')
 
 from Core import SolverCore
 
