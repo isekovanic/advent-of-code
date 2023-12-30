@@ -13,8 +13,7 @@ class Solver(SolverCore):
         
         while True:
             to_hash = '{}{}'.format(secret_key, str(i))
-            hash = md5(to_hash.encode('utf-8')).hexdigest()
-            if hash[:5] == '00000':
+            if md5(to_hash.encode('utf-8')).hexdigest()[:5] == '00000':
                 break
             
             i += 1
