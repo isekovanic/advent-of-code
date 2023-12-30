@@ -8,5 +8,5 @@ class Solver(SolverCore):
 	def _solve(self, problem_input):
 		return 'Merry Christmas !'
 
-solver = Solver()
+solver = Solver('Merry Christmas !')
 solver.solve()

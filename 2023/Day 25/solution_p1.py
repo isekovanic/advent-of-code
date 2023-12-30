@@ -41,7 +41,7 @@ class Solver(SolverCore):
 					residual_graph[v] += [u]
 
 			max_flow += min_capacity
-				    
+
 		return (max_flow, residual_graph)
 
 	def min_cut(self, residual_graph, source):
@@ -93,8 +93,8 @@ class Solver(SolverCore):
 						component_size = len(self.min_cut(residual_graph, i))
 						return component_size * (len(graph) - component_size)
 
-		# no such minimum cut found, should never happen		
+		# no such minimum cut found, should never happen
 		return -1
 
-solver = Solver()
+solver = Solver(54)
 solver.solve()

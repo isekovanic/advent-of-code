@@ -1,19 +1,24 @@
 from time import gmtime, strftime, time
+from types import MappingProxyType
 from abc import ABC, abstractmethod
 from sys import argv
 
-input_types = {
-	'test': 'input_test.txt',
-	'real': 'input.txt'
-}
-
 class SolverCore(ABC):
-	def __init__(self, expected_answer, input_file_override = None):
+	def __init__(self, expected_answer, input_types_override = MappingProxyType({})):
 		self.expected_answer = expected_answer
-		self.input_file_override = input_file_override
+		
+		default_input_types = {
+			'test': 'input_test.txt',
+			'real': 'input.txt'
+		}
+		
+		self.input_types = {
+			**default_input_types,
+			**input_types_override
+		}
 
 	@abstractmethod
-	def _solve(self, input):
+	def _solve(self, problem_input):
 		pass
 
 	def solve(self):
@@ -32,7 +37,7 @@ class SolverCore(ABC):
 			print('=============================')
 
 	def solve_for_type(self, input_type):
-		input_file = input_types[input_type]
+		input_file = self.input_types[input_type]
 
 		problem_input = self.read_input(input_file)
 
@@ -43,7 +48,7 @@ class SolverCore(ABC):
 		print('The solution is: {}'.format(solution))
 
 		if input_type == 'test':
-			expected = self.expected_answer
+			expected = str(self.expected_answer)
 
 			if solution == expected:
 				print('The solution to the test case is correct !')
@@ -54,7 +59,7 @@ class SolverCore(ABC):
 
 		took = end - start
 
-		print('The program execution time was: {}'.format('{}.{}'.format(strftime('%H:%M:%S', gmtime(end - start)), int(took * 1000) % 1000)))
+		print('The program execution time was: {}'.format('{}.{}'.format(strftime('%H:%M:%S', gmtime(took)), int(took * 1000) % 1000)))
 
 		return solution
 

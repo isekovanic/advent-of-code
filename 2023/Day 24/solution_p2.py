@@ -29,16 +29,16 @@ from Core import SolverCore
 #	Here's the catch though, both of these components have no constant before them (or we can say they're multiplied by a
 #	constant that equals 1). This means, that if we generate 2 of these equations by subtracting one from the other we would
 #	get a linear equation with 4 variables. Here is roughly what that would look like:
-#	x1 * rock_vy - rock_x * rock_vy + rock_x * vy1 - y1 * rock_vx + rock_y * rock_vx - rock_y * vx1 
-#	- x2 * rock_vy + rock_x * rock_vy - rock_x * vy2 + y2 * rock_vx - rock_y * rock_vx + rock_y * vx2 
-#	= x1 * vy1 - y1 * vx1 - x2 * vy2 + y2 * vx2 <=> 
+#	x1 * rock_vy - rock_x * rock_vy + rock_x * vy1 - y1 * rock_vx + rock_y * rock_vx - rock_y * vx1
+#	- x2 * rock_vy + rock_x * rock_vy - rock_x * vy2 + y2 * rock_vx - rock_y * rock_vx + rock_y * vx2
+#	= x1 * vy1 - y1 * vx1 - x2 * vy2 + y2 * vx2 <=>
 #	<=> (x1 - x2) * rock_vy + rock_x * (vy1 - vy2) - (y1 - y2) * rock_vx - rock_y * (vx1 - vx2) = x1 * vy1 - y1 * vx1 - x2 * vy2 + y2 * vx2
 # - Since we have a ton of these equations (and the example test case also subtly hints at this since it has 5 points), it
 #	turns out we can craft 4 different of these equations very easily (by doing for example hailstone 1 with hailstone 2, then hailstone 1 with
 #	hailstone 3 etc.), giving us a system of 4 linear equations with 4 variables. This is something that we can solve and we
-#	can do it for every axis (the example only explains the solution for the x-axis). In the end, we should have a solution 
-#	satisfying all of the rules (we should only really need 4 hailstones to do this). The solution below should have a 
-#	sufficient number of comments to guide you through the process. 
+#	can do it for every axis (the example only explains the solution for the x-axis). In the end, we should have a solution
+#	satisfying all of the rules (we should only really need 4 hailstones to do this). The solution below should have a
+#	sufficient number of comments to guide you through the process.
 # - Ironically, as difficult as it was to figure this out the solution works super fast (unlike Day 23 :'( )
 
 class Solver(SolverCore):
@@ -128,8 +128,8 @@ class Solver(SolverCore):
 		yz_vz, yz_y, yz_vy, yz_z = self.cramer_method(yz_equations, yz_constants)
 		xz_vz, xz_x, xz_vx, xz_z = self.cramer_method(xz_equations, xz_constants)
 
-		# This part's pure paranoia that the solution is not correct in some cases. Left 
-		# these here in case there is indeed some combination of the points for which this 
+		# This part's pure paranoia that the solution is not correct in some cases. Left
+		# these here in case there is indeed some combination of the points for which this
 		# does not work well.
 
 		x = 0
@@ -153,5 +153,5 @@ class Solver(SolverCore):
 		# casting just to get rid of the decimal representation, this will always be an integer
 		return int(x + y + z)
 
-solver = Solver()
+solver = Solver(47)
 solver.solve()

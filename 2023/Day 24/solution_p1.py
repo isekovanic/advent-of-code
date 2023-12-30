@@ -95,5 +95,5 @@ class Solver(SolverCore):
 		
 		return result
 
-solver = Solver()
+solver = Solver(0)
 solver.solve()
