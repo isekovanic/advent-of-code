@@ -9,7 +9,7 @@ class Solver(SolverCore):
         if partial_sum == target:
             yield partial
         if partial_sum >= target:
-            pass
+            return
         for i, n in enumerate(numbers):
             remaining = numbers[i + 1:]
             yield from self.subset_sum(remaining, target, partial + [n], partial_sum + n)
