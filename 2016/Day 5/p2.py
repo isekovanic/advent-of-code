@@ -17,7 +17,6 @@ class Solver(SolverCore):
                 position = md5_hash[5]
                 char = md5_hash[6]
                 if position.isnumeric() and '0' <= position < '8' and result[int(position)] == '':
-                    print(i)
                     result[int(position)] = char
                     iterations += 1
                 
