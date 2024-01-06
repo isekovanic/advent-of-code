@@ -45,6 +45,7 @@ class Solver(SolverCore):
                         bots[r_hi] += [hi]
                     bots[bot] = []
                     break
+                    
             if not found:
                 break
         

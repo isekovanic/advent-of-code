@@ -48,10 +48,10 @@ class Solver(SolverCore):
                     
                     bots[bot] = []
                     break
+                    
             if not found:
                 break
         
-        # no bots compare those two microchips, should not happen
         return reduce(lambda x, y: x * y, [int(x) for x in outputs['o0'] + outputs['o1'] + outputs['o2']])
 
 
