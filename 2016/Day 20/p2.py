@@ -55,7 +55,6 @@ class Solver(SolverCore):
             
         result += merged_ranges[0][0] - min_ip
         result += max_ip - merged_ranges[-1][1]
-            
         
         return result
 
