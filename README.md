@@ -10,6 +10,8 @@ The solutions are written in Python following a specific template. [Reuse of thi
 
 Solutions for all days can be found in the repository for the following years:
 
+- [2015](https://adventofcode.com/2015)
+- [2016](https://adventofcode.com/2016)
 - [2023](https://adventofcode.com/2023)
 
 ## Prerequisites
