@@ -1,0 +1,25 @@
+import sys
+
+sys.path.append('../../')
+
+from Core import SolverCore
+
+class Solver(SolverCore):
+    def _solve(self, problem_input):
+        digits = [int(x) for x in problem_input[0].strip()]
+        
+        result = 0
+        
+        digits += [digits[0]]
+        
+        for idx, digit in enumerate(digits[:-1]):
+            if digit == digits[idx + 1]:
+                result += digit
+        
+        
+
+        return result
+
+
+solver = Solver(4)
+solver.solve()
