@@ -4,6 +4,10 @@ sys.path.append('../../')
 
 from Core import SolverCore
 
+# Note: I was really convinced that Part 2 would be the same task but with a much, much larger
+# input; hence the over-engineered Part 1. Part 2 would've been a 2-liner change had I gone
+# with the "just do it" approach.
+
 directions = {
     0: (1, 0),
     1: (0, -1),
