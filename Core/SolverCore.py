@@ -8,7 +8,7 @@ class SolverCore(ABC):
 		self.expected_answer = expected_answer
 		
 		default_input_types = {
-			'test': 'input_test.txt',
+			'test': 'input_test_p1.txt',
 			'real': 'input.txt'
 		}
 		
