@@ -35,5 +35,5 @@ class Solver(SolverCore):
         return result
 
 
-solver = Solver(0)
+solver = Solver(11387)
 solver.solve()
