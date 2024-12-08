@@ -14,7 +14,6 @@ class Solver(SolverCore):
         
         while True:
             nx, ny = nx + dx, ny + dy
-            print(antenna, nx, ny)
             if 0 <= nx < dimx and 0 <= ny < dimy:
                 antinodes.add((nx, ny))
             else:
