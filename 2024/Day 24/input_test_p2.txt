@@ -1,0 +1,26 @@
+x00: 0
+x01: 1
+x02: 0
+x03: 1
+y00: 0
+y01: 0
+y02: 1
+y03: 1
+
+x00 XOR y00 -> z00
+x00 AND y00 -> z01
+x01 XOR y01 -> aaz
+x01 AND y01 -> bbz
+aaz XOR aaa -> aaa
+aaz AND aaa -> ccz
+bbz OR ccz -> ddz
+x02 XOR y02 -> aax
+x02 AND y02 -> z02
+aax XOR ddz -> bbx
+aax AND ddz -> ccx
+bbx OR ccx -> ddx
+x03 XOR y03 -> aac
+x03 AND y03 -> bbc
+aac XOR ddx -> z03
+aac AND ddx -> ccc
+bbc OR ccc -> ddc
